@@ -1,0 +1,1765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ImageResizingApp</class>
+ <widget class="QMainWindow" name="ImageResizingApp">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1050</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="acceptDrops">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Image Resizing App</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(20, 20, 20);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</y>
+      <width>1861</width>
+      <height>961</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(10, 10, 10);
+border-radius: 10px;
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLineEdit" name="newWidthLineEdit">
+     <property name="geometry">
+      <rect>
+       <x>710</x>
+       <y>144</y>
+       <width>161</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255,255,255)</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="newHeightLabel">
+     <property name="geometry">
+      <rect>
+       <x>1000</x>
+       <y>144</y>
+       <width>131</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255,255,255);</string>
+     </property>
+     <property name="text">
+      <string>New Height:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="newHeightLineEdit">
+     <property name="geometry">
+      <rect>
+       <x>1170</x>
+       <y>144</y>
+       <width>161</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255,255,255)</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="selectImageButton">
+     <property name="geometry">
+      <rect>
+       <x>550</x>
+       <y>20</y>
+       <width>391</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: rgb(50,100,255);
+}
+
+QPushButton:pressed {
+    background-color: #2980b9;
+    padding: 12px 22px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Select Image</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="newWidthLabel">
+     <property name="geometry">
+      <rect>
+       <x>550</x>
+       <y>144</y>
+       <width>121</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255,255,255);</string>
+     </property>
+     <property name="text">
+      <string>New Width:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="NearestNeighborLabel">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>350</y>
+       <width>401</width>
+       <height>471</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255,255,255);
+border-radius: 10px;
+
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>137</x>
+       <y>285</y>
+       <width>261</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;
+ background-color:transparent;</string>
+     </property>
+     <property name="text">
+      <string>Nearest-Neighbor Interpolation</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::AutoText</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="BilinearLabel">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>350</y>
+       <width>401</width>
+       <height>471</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255,255,255);
+border-radius: 10px;
+
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="BicubicLabel">
+     <property name="geometry">
+      <rect>
+       <x>960</x>
+       <y>350</y>
+       <width>401</width>
+       <height>471</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255,255,255);
+border-radius: 10px;
+
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LanczosLabel">
+     <property name="geometry">
+      <rect>
+       <x>1400</x>
+       <y>350</y>
+       <width>401</width>
+       <height>471</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255,255,255);
+border-radius: 10px;
+
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="convertImageButton">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>212</y>
+       <width>341</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: rgb(50,100,255);
+}
+
+QPushButton:pressed {
+    background-color: #2980b9;
+    padding: 12px 22px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Convert Image</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>1080</x>
+       <y>290</y>
+       <width>271</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;
+</string>
+     </property>
+     <property name="text">
+      <string>Bicubic Interpolation</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::AutoText</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>1517</x>
+       <y>285</y>
+       <width>181</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;
+background-color: transparent;
+</string>
+     </property>
+     <property name="text">
+      <string>Lanczos Interpolation</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::AutoText</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="NNOpen">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>830</y>
+       <width>200</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: rgb(50,100,255);
+}
+
+QPushButton:pressed {
+    background-color: #2980b9;
+    padding: 12px 22px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Open In Full Resolution</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="BILOpen">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>830</y>
+       <width>200</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: rgb(50,100,255);
+}
+
+QPushButton:pressed {
+    background-color: #2980b9;
+    padding: 12px 22px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Open In Full Resolution</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="BICOpen">
+     <property name="geometry">
+      <rect>
+       <x>960</x>
+       <y>830</y>
+       <width>200</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: rgb(50,100,255);
+}
+
+QPushButton:pressed {
+    background-color: #2980b9;
+    padding: 12px 22px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Open In Full Resolution</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="LanOpen">
+     <property name="geometry">
+      <rect>
+       <x>1400</x>
+       <y>830</y>
+       <width>200</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: rgb(50,100,255);
+}
+
+QPushButton:pressed {
+    background-color: #2980b9;
+    padding: 12px 22px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Open In Full Resolution</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="timeBicubic">
+     <property name="geometry">
+      <rect>
+       <x>1042</x>
+       <y>890</y>
+       <width>241</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255,255,255);
+background-color: rgb(50,50,50);
+</string>
+     </property>
+     <property name="text">
+      <string>Time Taken:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="timeLanczos">
+     <property name="geometry">
+      <rect>
+       <x>1482</x>
+       <y>890</y>
+       <width>241</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255,255,255);
+background-color: rgb(50,50,50);</string>
+     </property>
+     <property name="text">
+      <string>Time Taken:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="saveNearest">
+     <property name="geometry">
+      <rect>
+       <x>263</x>
+       <y>830</y>
+       <width>198</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: rgb(50,100,255);
+}
+
+QPushButton:pressed {
+    background-color: #2980b9;
+    padding: 12px 22px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Save Image</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="saveBilinear">
+     <property name="geometry">
+      <rect>
+       <x>713</x>
+       <y>830</y>
+       <width>198</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: rgb(50,100,255);
+}
+
+QPushButton:pressed {
+    background-color: #2980b9;
+    padding: 12px 22px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Save Image</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="saveBicubic">
+     <property name="geometry">
+      <rect>
+       <x>1163</x>
+       <y>830</y>
+       <width>198</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: rgb(50,100,255);
+}
+
+QPushButton:pressed {
+    background-color: #2980b9;
+    padding: 12px 22px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Save Image</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="saveLanczos">
+     <property name="geometry">
+      <rect>
+       <x>1603</x>
+       <y>830</y>
+       <width>198</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: rgb(50,100,255);
+}
+
+QPushButton:pressed {
+    background-color: #2980b9;
+    padding: 12px 22px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Save Image</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="widget_5" native="true">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>275</y>
+       <width>311</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(50, 50, 50);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="widget_6" native="true">
+     <property name="geometry">
+      <rect>
+       <x>561</x>
+       <y>275</y>
+       <width>311</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(50, 50, 50);</string>
+     </property>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>10</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: white;
+</string>
+      </property>
+      <property name="text">
+       <string>Bilinear Interpolation</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="widget_7" native="true">
+     <property name="geometry">
+      <rect>
+       <x>1040</x>
+       <y>270</y>
+       <width>311</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(20, 20, 20);</string>
+     </property>
+     <widget class="QFrame" name="frame_2">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>-1030</x>
+        <y>-270</y>
+        <width>1861</width>
+        <height>961</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(10, 10, 10);
+border-radius: 10px;
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLineEdit" name="newWidthLineEdit_2">
+       <property name="geometry">
+        <rect>
+         <x>710</x>
+         <y>100</y>
+         <width>161</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255,255,255)</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="newHeightLabel_2">
+       <property name="geometry">
+        <rect>
+         <x>1000</x>
+         <y>100</y>
+         <width>131</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255,255,255);</string>
+       </property>
+       <property name="text">
+        <string>New Height:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="newHeightLineEdit_2">
+       <property name="geometry">
+        <rect>
+         <x>1170</x>
+         <y>100</y>
+         <width>161</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255,255,255)</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="selectImageButton_2">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>20</y>
+         <width>801</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgb(50,100,255);
+}
+
+QPushButton:pressed {
+    background-color: #2980b9;
+    padding: 12px 22px;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Select Image</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="newWidthLabel_2">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>100</y>
+         <width>121</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255,255,255);</string>
+       </property>
+       <property name="text">
+        <string>New Width:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="NearestNeighborLabel_2">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>350</y>
+         <width>401</width>
+         <height>471</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255,255,255);
+border-radius: 10px;
+
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>290</y>
+         <width>271</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white;
+</string>
+       </property>
+       <property name="text">
+        <string>Nearest-Neighbor Interpolation</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="BilinearLabel_2">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>350</y>
+         <width>401</width>
+         <height>471</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255,255,255);
+border-radius: 10px;
+
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="BicubicLabel_2">
+       <property name="geometry">
+        <rect>
+         <x>960</x>
+         <y>350</y>
+         <width>401</width>
+         <height>471</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255,255,255);
+border-radius: 10px;
+
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="LanczosLabel_2">
+       <property name="geometry">
+        <rect>
+         <x>1400</x>
+         <y>350</y>
+         <width>401</width>
+         <height>471</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255,255,255);
+border-radius: 10px;
+
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="convertImageButton_2">
+       <property name="geometry">
+        <rect>
+         <x>804</x>
+         <y>180</y>
+         <width>341</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgb(50,100,255);
+}
+
+QPushButton:pressed {
+    background-color: #2980b9;
+    padding: 12px 22px;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Convert Image</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>290</y>
+         <width>271</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white;
+</string>
+       </property>
+       <property name="text">
+        <string>Bilinear Interpolation</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>1520</x>
+         <y>290</y>
+         <width>271</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white;
+</string>
+       </property>
+       <property name="text">
+        <string>Lanczos Interpolation</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="NNOpen_2">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>830</y>
+         <width>200</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgb(50,100,255);
+}
+
+QPushButton:pressed {
+    background-color: #2980b9;
+    padding: 12px 22px;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Open In Full Resolution</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="BILOpen_2">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>830</y>
+         <width>200</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgb(50,100,255);
+}
+
+QPushButton:pressed {
+    background-color: #2980b9;
+    padding: 12px 22px;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Open In Full Resolution</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="BICOpen_2">
+       <property name="geometry">
+        <rect>
+         <x>960</x>
+         <y>830</y>
+         <width>200</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgb(50,100,255);
+}
+
+QPushButton:pressed {
+    background-color: #2980b9;
+    padding: 12px 22px;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Open In Full Resolution</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="LanOpen_2">
+       <property name="geometry">
+        <rect>
+         <x>1400</x>
+         <y>830</y>
+         <width>200</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgb(50,100,255);
+}
+
+QPushButton:pressed {
+    background-color: #2980b9;
+    padding: 12px 22px;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Open In Full Resolution</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="timeBillinear_2">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>894</y>
+         <width>200</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255,255,255);
+background-color: transparent;</string>
+       </property>
+       <property name="text">
+        <string>Time Taken:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="timeBicubic_2">
+       <property name="geometry">
+        <rect>
+         <x>1069</x>
+         <y>894</y>
+         <width>200</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255,255,255);
+background-color: transparent;
+</string>
+       </property>
+       <property name="text">
+        <string>Time Taken:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="timeLanczos_2">
+       <property name="geometry">
+        <rect>
+         <x>1510</x>
+         <y>894</y>
+         <width>200</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255,255,255);
+background-color: transparent;</string>
+       </property>
+       <property name="text">
+        <string>Time Taken:</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="saveNearest_2">
+       <property name="geometry">
+        <rect>
+         <x>263</x>
+         <y>830</y>
+         <width>198</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgb(50,100,255);
+}
+
+QPushButton:pressed {
+    background-color: #2980b9;
+    padding: 12px 22px;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Save Image</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="saveBilinear_2">
+       <property name="geometry">
+        <rect>
+         <x>713</x>
+         <y>830</y>
+         <width>198</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgb(50,100,255);
+}
+
+QPushButton:pressed {
+    background-color: #2980b9;
+    padding: 12px 22px;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Save Image</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="saveBicubic_2">
+       <property name="geometry">
+        <rect>
+         <x>1163</x>
+         <y>830</y>
+         <width>198</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgb(50,100,255);
+}
+
+QPushButton:pressed {
+    background-color: #2980b9;
+    padding: 12px 22px;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Save Image</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="saveLanczos_2">
+       <property name="geometry">
+        <rect>
+         <x>1603</x>
+         <y>830</y>
+         <width>198</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgb(50,100,255);
+}
+
+QPushButton:pressed {
+    background-color: #2980b9;
+    padding: 12px 22px;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Save Image</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="widget_9" native="true">
+       <property name="geometry">
+        <rect>
+         <x>167</x>
+         <y>890</y>
+         <width>211</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(20, 20, 20);</string>
+       </property>
+       <widget class="QLabel" name="timeNearest_2">
+        <property name="geometry">
+         <rect>
+          <x>21</x>
+          <y>2</y>
+          <width>200</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255,255,255);
+background-color: none;
+</string>
+        </property>
+        <property name="text">
+         <string>Time Taken:</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="widget_10" native="true">
+       <property name="geometry">
+        <rect>
+         <x>610</x>
+         <y>890</y>
+         <width>211</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(20, 20, 20);</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="widget_11" native="true">
+       <property name="geometry">
+        <rect>
+         <x>1050</x>
+         <y>890</y>
+         <width>211</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(20, 20, 20);</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="widget_12" native="true">
+       <property name="geometry">
+        <rect>
+         <x>1490</x>
+         <y>890</y>
+         <width>211</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(20, 20, 20);</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="widget_13" native="true">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>280</y>
+         <width>311</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(20, 20, 20);</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="widget_14" native="true">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>270</y>
+         <width>311</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(20, 20, 20);</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="widget_16" native="true">
+       <property name="geometry">
+        <rect>
+         <x>1420</x>
+         <y>270</y>
+         <width>311</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(20, 20, 20);</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="widget_15" native="true">
+       <property name="geometry">
+        <rect>
+         <x>1500</x>
+         <y>700</y>
+         <width>311</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(20, 20, 20);</string>
+       </property>
+       <widget class="QLabel" name="label_11">
+        <property name="geometry">
+         <rect>
+          <x>64</x>
+          <y>10</y>
+          <width>221</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: white;
+</string>
+        </property>
+        <property name="text">
+         <string>Bilinear Interpolation</string>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::AutoText</enum>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="widget_8" native="true">
+     <property name="geometry">
+      <rect>
+       <x>1446</x>
+       <y>275</y>
+       <width>311</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(50, 50, 50);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="widget_17" native="true">
+     <property name="geometry">
+      <rect>
+       <x>1010</x>
+       <y>275</y>
+       <width>311</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(50, 50, 50);</string>
+     </property>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>71</x>
+        <y>10</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: white;
+</string>
+      </property>
+      <property name="text">
+       <string>Bicubic Interpolation</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="aboutAlgorithmsButton">
+     <property name="geometry">
+      <rect>
+       <x>950</x>
+       <y>20</y>
+       <width>391</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: rgb(50,100,255);
+}
+
+QPushButton:pressed {
+    background-color: #2980b9;
+    padding: 12px 22px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>How Does Each Algorithm Work</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="timeBillinear">
+     <property name="geometry">
+      <rect>
+       <x>592</x>
+       <y>890</y>
+       <width>241</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255,255,255);
+background-color: rgb(50,50,50);
+
+</string>
+     </property>
+     <property name="text">
+      <string>Time Taken:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="timeNearest">
+     <property name="geometry">
+      <rect>
+       <x>141</x>
+       <y>890</y>
+       <width>241</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255,255,255);
+background-color: rgb(50,50,50);
+</string>
+     </property>
+     <property name="text">
+      <string>Time Taken:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="resetButton">
+     <property name="geometry">
+      <rect>
+       <x>950</x>
+       <y>212</y>
+       <width>341</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: rgb(50,100,255);
+}
+
+QPushButton:pressed {
+    background-color: #2980b9;
+    padding: 12px 22px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Reset</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="selectedImageSizeLabel">
+     <property name="geometry">
+      <rect>
+       <x>787</x>
+       <y>80</y>
+       <width>441</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255,255,255)</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="selectedImageLabel">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>78</y>
+       <width>221</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255,255,255);</string>
+     </property>
+     <property name="text">
+      <string>Selected Image Size:</string>
+     </property>
+    </widget>
+    <zorder>widget_8</zorder>
+    <zorder>widget_6</zorder>
+    <zorder>widget_5</zorder>
+    <zorder>newWidthLineEdit</zorder>
+    <zorder>newHeightLabel</zorder>
+    <zorder>newHeightLineEdit</zorder>
+    <zorder>selectImageButton</zorder>
+    <zorder>newWidthLabel</zorder>
+    <zorder>NearestNeighborLabel</zorder>
+    <zorder>label_3</zorder>
+    <zorder>BilinearLabel</zorder>
+    <zorder>BicubicLabel</zorder>
+    <zorder>LanczosLabel</zorder>
+    <zorder>convertImageButton</zorder>
+    <zorder>label_5</zorder>
+    <zorder>label_6</zorder>
+    <zorder>NNOpen</zorder>
+    <zorder>BILOpen</zorder>
+    <zorder>BICOpen</zorder>
+    <zorder>LanOpen</zorder>
+    <zorder>timeBicubic</zorder>
+    <zorder>timeLanczos</zorder>
+    <zorder>saveNearest</zorder>
+    <zorder>saveBilinear</zorder>
+    <zorder>saveBicubic</zorder>
+    <zorder>saveLanczos</zorder>
+    <zorder>widget_7</zorder>
+    <zorder>widget_17</zorder>
+    <zorder>aboutAlgorithmsButton</zorder>
+    <zorder>timeBillinear</zorder>
+    <zorder>timeNearest</zorder>
+    <zorder>resetButton</zorder>
+    <zorder>selectedImageSizeLabel</zorder>
+    <zorder>selectedImageLabel</zorder>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
